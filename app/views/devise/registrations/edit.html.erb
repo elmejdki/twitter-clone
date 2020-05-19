@@ -12,9 +12,29 @@
           
           <div class="field">
             <div class="control">
-              <%= f.input :email,
+              <%= f.input :name,
                         required: true,
                         autofocus: true,
+                        input_html: { class: "input" }, 
+                        wrapper: false,
+                        label_html: { class: "label" } %>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
+              <%= f.input :username,
+                        required: true,
+                        input_html: { class: "input" }, 
+                        wrapper: false,
+                        label_html: { class: "label" } %>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
+              <%= f.input :email,
+                        required: true,
                         input_html: { class: "input" }, 
                         wrapper: false,
                         label_html: { class: "label" } %>
@@ -56,7 +76,7 @@
           </div>
 
           <div class="form-actions">
-            <%= f.button :submit, "Update" %>
+            <%= f.button :submit, "Update", class: "button is-info is-medium" %>
           </div>
         <% end %>
 
